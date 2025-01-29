@@ -45,7 +45,7 @@
   }
 }
 
-.button[data-start] {
+.start-btn {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -60,11 +60,11 @@
 
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
-.button[data-start]:hover {
+.start-btn:hover {
   background-color: #6c8cff;
 }
 
-.button[data-start]:disabled {
+.start-btn:disabled {
   background-color: #cfcfcf;
   color: #989898;
 }
