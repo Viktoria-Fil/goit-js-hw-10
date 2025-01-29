@@ -7,10 +7,10 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const startTimerBtn = document.querySelector('button[data-start]')
 const dateTimerPicker = document.querySelector('#datetime-picker')
-const daysCounter = document.querySelector('[data-days]')
-const hoursCounter = document.querySelector('[data-hours]')
-const minutesCounter = document.querySelector('[data-minutes]')
-const secondsCounter = document.querySelector('[data-seconds]')
+const daysCounter = document.querySelector('.value[data-days]')
+const hoursCounter = document.querySelector('.value[data-hours]')
+const minutesCounter = document.querySelector('.value[data-minutes]')
+const secondsCounter = document.querySelector('.value[data-seconds]')
 
 let userSelectedDate = 0;
 
@@ -34,9 +34,9 @@ const options = {
 flatpickr('#datetime-picker', options);
 
 
-startTimerBtn.addEventListener('click', timerIn) 
+startTimerBtn.addEventListener('click', timerInit) 
 
-function timerIn(event) {
+function timerInit(event) {
     event.target.disabled = true;
     dateTimerPicker.disabled = true;
 
@@ -117,4 +117,18 @@ const successToastOpt = {
   transitionOut: 'fadeOutUp',
 };
 
-
+const infoToastOpt = {
+  title: 'Notification',
+  titleSize: '16px',
+  titleLineHeight: 1.5,
+  message: 'The timer just expired',
+  messageColor: '#fff',
+  messageSize: '16px',
+  messageLineHeight: 1.5,
+  backgroundColor: '#0099FF',
+  position: 'topRight',
+  theme: 'dark',
+  closeOnEscape: true,
+  transitionIn: 'bounceInDown',
+  transitionOut: 'fadeOutUp',
+};
